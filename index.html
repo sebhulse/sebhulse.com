@@ -11,32 +11,17 @@
     <title>Seb Hulse</title>
     <!-- <link rel="icon" type="image/x-icon" href="assets/graphics/favicon.ico"/> -->
     <link href="bootstrap.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
     <div class="container">
       <header
-        class="
-          header
-          sticky-top
-          d-flex
-          flex-wrap
-          align-items-center
-          justify-content-center justify-content-md-between
-          py-3
-          mb-4
-          border-bottom
-        "
+        class="header sticky-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
       >
         <a
           href="/index.html"
-          class="
-            d-flex
-            align-items-center
-            col-md-3
-            mb-2 mb-md-0
-            text-dark text-decoration-none
-          "
+          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
         >
           <h1><strong>Seb Hulse</strong></h1>
         </a>
@@ -55,23 +40,101 @@
           </li>
         </ul>
       </header>
-      <h2 class="text-center">Hello! I'm Seb.</h2>
+      <h1 class="text-center">Hi! I'm Seb.</h1>
       <div class="text-center">
-        <img src="assets/seb-minified.svg" style="width: 60%" />
+        <img src="assets/seb-minified.svg" style="width: 40%" />
       </div>
-      <p class="text-center">
-        <em>Engineer | Web Dabbler | Photographer | Swimmer</em>
-      </p>
-      <h2 id="projects" class="text-center">Projects</h2>
+      <h4 class="text-center text-muted">
+        <em>Engineer | Web Dabbler | Swimmer</em>
+      </h4>
+      <h2 id="projects" class="text-center section">Projects</h2>
       <p class="text-center">
         Here's an updated list of my most recent articles:
       </p>
       <!-- Articles here -->
-      <h2 id="about" class="text-center">About</h2>
+
+      <h2 id="about" class="text-center section">About</h2>
       <p class="text-center">A brief summary of recent endeavours.</p>
-      <h2 id="links" class="text-center">Links</h2>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-image">
+            <img
+              class="rounded-circle img-fluid"
+              src="assets/seb-minified.svg"
+              alt=""
+            />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>2020-Present</h4>
+              <h4 class="subheading">Computer Science MSc</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Currently studying part-time at the University of York, UK for a
+                Masters in Computer Science. Due to graduate in 2022 - open to
+                work in the meantime.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img
+              class="rounded-circle img-fluid"
+              src="assets/seb-minified.svg"
+              alt=""
+            />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>2019-2020</h4>
+              <h4 class="subheading">ATPL Student Pilot</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Studied at Lufthansa Aviation Training GmbH, Germany for an EASA
+                ATPL. Passed all 14 theory exams but stopped before gaining a
+                license due to Sustainability, Lifestyle and Industry concerns.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-image">
+            <img
+              class="rounded-circle img-fluid"
+              src="assets/seb-minified.svg"
+              alt=""
+            />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>2014-2018</h4>
+              <h4 class="subheading">Mechanical Engineering BEng</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Studied at the University of Huddersfield, UK as a Mechanical
+                Engineer and completed a year in industry at General Electric.
+                Graduated in 2018 with a First Class (Hons) BEng.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img
+              class="rounded-circle img-fluid"
+              src="assets/seb-minified.svg"
+              alt=""
+            />
+          </div>
+        </li>
+      </ul>
+      <h2 id="links" class="text-center section">Links</h2>
       <p class="text-center">Some quick links. Rapid.</p>
-      <h2 id="contact" class="text-center">Contact</h2>
+      <h2 id="contact" class="text-center section">Contact</h2>
       <p class="text-center">Feel free to say hi at:</p>
       <a class="text-decoration-none" href="mailto:hi@sebhulse.com"
         ><p class="text-center">

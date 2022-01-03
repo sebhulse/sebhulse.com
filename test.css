@@ -59,6 +59,9 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
 }
+.fixed-top {
+  background-color: #fffaecec;
+}
 .header {
   position: sticky;
   top: 0;
