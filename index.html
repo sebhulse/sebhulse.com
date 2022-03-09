@@ -13,7 +13,8 @@
     <link rel="icon" type="image/x-icon" href="assets/tree.svg" />
     <link href="output.css" rel="stylesheet" />
   </head>
-  <div id="bg" class="font-serif pt-4 my-4 sm:my-8">
+
+  <body id="body" class="font-sans pt-4 my-4 sm:my-8">
     <div id="hero" class="grid place-items-center h-screen font-serif p-2">
       <div class="text-center">
         <div class="">
@@ -23,12 +24,12 @@
           >
             Hi! I'm Seb.
           </span>
-          <h4 class="pt-6 text-black text-xl sm:text-2xl">
-            <em>Engineer | Web Dabbler | Swimmer</em>
+          <h4 class="font-sans pt-6 text-gray-500 text-xl sm:text-2xl">
+            Engineer | Web Dabbler | Swimmer
           </h4>
         </div>
       </div>
-      <p class="text-lg sm:text-2xl">&#8595;</p>
+      <p class="text-xl text-gray-500 sm:text-4xl">&#8595;</p>
     </div>
 
     <div id="projects" class="my-20">
@@ -40,35 +41,41 @@
     <div class="text-center mx-4 sm:mx-12">
       <p class="text-lg py-6">Here are my 5 most recent blog posts:</p>
 
-      <div class="blog-card">
-        <div class="blog-card-inner">
-          <div class="text-black">
-            Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
-            with a Raspberry Pi
+      <a target="_blank" href="https://medium.com/me/stats/post/f82d94460fdd">
+        <div class="blog-card">
+          <div class="blog-card-inner">
+            <div class="font-sans text-black">
+              Part 1 Intro — Build and Monitor an Affordable Battery-Solar
+              System with a Raspberry Pi
+            </div>
+            <div class="text-gray-600 text-md">Sat, 18 Sep 2021</div>
           </div>
-          <div class="text-black text-sm">Sat, 18 Sep 2021</div>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-inner">
-          <div class="text-black">
-            Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
-            with a Raspberry Pi
+      <a target="_blank" href="https://medium.com/me/stats/post/f82d94460fdd">
+        <div class="blog-card">
+          <div class="blog-card-inner">
+            <div class="font-sans text-black">
+              Part 1 Intro — Build and Monitor an Affordable Battery-Solar
+              System with a Raspberry Pi
+            </div>
+            <div class="text-gray-600 text-md">Sat, 18 Sep 2021</div>
           </div>
-          <div class="text-black text-sm">Sat, 18 Sep 2021</div>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-inner">
-          <div class="text-black">
-            Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
-            with a Raspberry Pi
+      <a target="_blank" href="https://medium.com/me/stats/post/f82d94460fdd">
+        <div class="blog-card">
+          <div class="blog-card-inner">
+            <div class="font-sans text-black">
+              Part 1 Intro — Build and Monitor an Affordable Battery-Solar
+              System with a Raspberry Pi
+            </div>
+            <div class="text-gray-600 text-md">Sat, 18 Sep 2021</div>
           </div>
-          <div class="text-black text-sm">Sat, 18 Sep 2021</div>
         </div>
-      </div>
+      </a>
     </div>
 
     <div id="about" class="my-20">
@@ -80,29 +87,58 @@
     <div id="links" class="my-20">
       <div class="text-center">
         <span class="title">Links</span>
-        <div class="">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-            />
-          </svg>
-        </div>
       </div>
     </div>
 
+    <div class="text-center flex justify-center mx-4 sm:mx-12">
+      <div></div>
+      <a href="https://github.com/sebhulse" target="_blank">
+        <div class="link-card">
+          <div class="link-card-inner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 sm:w-16 sm:h-16 stroke-gray-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              />
+            </svg>
+          </div>
+        </div>
+        <p class="">Github</p>
+      </a>
+      <a href="https://sebhulse.medium.com" target="_blank">
+        <div class="link-card">
+          <div class="link-card-inner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 sm:w-16 sm:h-16 stroke-gray-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+              />
+            </svg>
+          </div>
+        </div>
+        <p class="">Medium</p>
+      </a>
+    </div>
     <div id="contact" class="my-20">
       <div class="text-center">
         <span class="title">Contact</span>
       </div>
     </div>
-  </div>
+  </body>
 </html>

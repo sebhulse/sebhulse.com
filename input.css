@@ -4,15 +4,22 @@
 
 @layer components {
   .title {
-    @apply m-2 text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2c699a] to-[#0db39e];
+    @apply font-sans m-4 text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2770e6] to-[#f7a5a7];
   }
 
   .blog-card {
-    /* @apply inline-block my-2 p-4 border border-slate-200 rounded-md bg-gradient-to-br from-sky-500/10 to-orange-500/10 hover:border-orange-500; */
-    @apply inline-block m-6 p-0.5 bg-gradient-to-tr from-blue-400 to-green-600 rounded-md;
+    @apply font-serif inline-block m-6 p-0.5 bg-gradient-to-tr from-[#2770e6] to-[#f7a5a7] rounded-md;
   }
 
   .blog-card-inner {
-    @apply p-4 bg-white rounded-md;
+    @apply p-6 bg-white rounded-md;
+  }
+
+  .link-card {
+    @apply font-serif inline-block m-6 p-0.5 bg-gradient-to-tr from-[#2770e6] to-[#f7a5a7] rounded-full;
+  }
+
+  .link-card-inner {
+    @apply p-6 bg-white rounded-full;
   }
 }
