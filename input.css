@@ -4,22 +4,14 @@
 
 @layer components {
   .title {
-    @apply font-sans m-4 text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2770e6] to-[#f7a5a7];
+    @apply font-serif m-2 text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2770e6] to-[#f7a5a7];
   }
 
   .blog-card {
-    @apply font-serif inline-block m-6 p-0.5 bg-gradient-to-tr from-[#2770e6] to-[#f7a5a7] rounded-md;
-  }
-
-  .blog-card-inner {
-    @apply font-sans text-black dark:text-slate-200 p-4 bg-white dark:bg-slate-900 rounded-md dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/50 hover:shadow-lg hover:shadow-[#2770e6]/40;
+    @apply border rounded-md m-6 p-4 inline-block dark:border-[#f7a5a7] border-slate-900 hover:shadow-slate-300 dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/40 hover:shadow-lg;
   }
 
   .link-card {
-    @apply font-serif inline-block m-4 p-0.5 bg-gradient-to-tr from-[#2770e6] to-[#f7a5a7] rounded-full;
-  }
-
-  .link-card-inner {
-    @apply p-6 bg-white dark:bg-slate-900 rounded-full dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/50 hover:shadow-lg hover:shadow-[#2770e6]/50;
+    @apply border rounded-full m-4 p-6 dark:border-[#f7a5a7] border-slate-900 hover:shadow-slate-300 dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/40 hover:shadow-lg;
   }
 }
