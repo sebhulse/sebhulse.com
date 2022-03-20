@@ -8,10 +8,18 @@
   }
 
   .blog-card {
-    @apply border rounded-md m-6 p-4 inline-block dark:border-[#f7a5a7] border-slate-900 hover:shadow-slate-300 dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/40 hover:shadow-lg;
+    @apply border rounded-md m-4 p-4 inline-block dark:border-[#f7a5a7] border-slate-900 hover:shadow-slate-300 dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/40 hover:shadow-lg;
   }
 
   .link-card {
     @apply border rounded-full m-4 p-6 dark:border-[#f7a5a7] border-slate-900 hover:shadow-slate-300 dark:hover:shadow-lg dark:hover:shadow-[#f7a5a7]/40 hover:shadow-lg;
+  }
+
+  .timeline-card {
+    @apply border text-center rounded-md my-2 p-4 dark:border-[#2770e6] border-slate-900;
+  }
+
+  .timeline-number {
+    @apply absolute flex items-center justify-center w-32 h-8 transform -translate-x-1/2 -translate-y-4 dark:bg-slate-900 border border-[#2770e6] rounded-md left-1/2 font-bold;
   }
 }
