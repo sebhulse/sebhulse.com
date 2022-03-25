@@ -1,4 +1,5 @@
 <!-- icons at https://heroicons.com/ -->
+<!-- fix responsiveness on small devices (h-screen) -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,15 +17,18 @@
 
   <body
     id="body"
-    class="font-sans pt-4 my-4 dark:bg-slate-900 text-black dark:text-slate-200 sm:my-8"
+    class="font-sans pt-4 my-4 bg-slate-900 text-slate-200 sm:my-8"
   >
-    <div id="hero" class="grid place-items-center h-screen font-serif p-2">
+    <div
+      id="hero"
+      class="grid place-items-center h-screen min-h-full font-serif p-2"
+    >
       <div class="text-center">
-        <div class="flex justify-center mb-20">
+        <div class="flex justify-center mb-8 sm:mb-20">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1000 1000"
-            class="h-16 w-16 sm:w-20 sm:h-20 stroke-slate-600 dark:stroke-slate-200"
+            class="h-16 w-16 sm:w-20 sm:h-20 stroke-slate-200"
           >
             <g stroke-linecap="round" stroke-width="35">
               <path fill="none" d="M500 1000V667" />
@@ -77,14 +81,12 @@
           Hi! I'm Seb.
         </span>
         <h4
-          class="font-sans pt-6 dark:text-slate-200 text-slate-600 text-xl sm:text-2xl"
+          class="font-sans pt-6 text-slate-200 text-xl tracking-widest sm:text-2xl"
         >
           Engineer | IoT Dabbler | Swimmer
         </h4>
       </div>
-      <p class="text-xl dark:text-slate-200 text-slate-600 sm:text-4xl">
-        &#8595;
-      </p>
+      <p class="text-xl text-slate-200 sm:text-4xl">&#8595;</p>
     </div>
 
     <div id="projects" class="my-20">
@@ -94,7 +96,7 @@
     </div>
 
     <div class="text-center mx-4 sm:mx-12">
-      <p class="text-lg dark:text-slate-200 py-6">
+      <p class="text-lg text-slate-200 py-6">
         Here are my 5 most recent blog posts:
       </p>
 
@@ -102,9 +104,7 @@
         <div class="blog-card">
           Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
           with a Raspberry Pi
-          <div class="text-slate-600 dark:text-slate-400 text-md">
-            Sat, 18 Sep 2021
-          </div>
+          <div class="text-slate-400 text-md">Sat, 18 Sep 2021</div>
         </div>
       </a>
 
@@ -112,9 +112,7 @@
         <div class="blog-card">
           Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
           with a Raspberry Pi
-          <div class="text-slate-600 dark:text-slate-400 text-md">
-            Sat, 18 Sep 2021
-          </div>
+          <div class="text-slate-400 text-md">Sat, 18 Sep 2021</div>
         </div>
       </a>
 
@@ -122,9 +120,7 @@
         <div class="blog-card">
           Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
           with a Raspberry Pi
-          <div class="text-slate-600 dark:text-slate-400 text-md">
-            Sat, 18 Sep 2021
-          </div>
+          <div class="text-slate-400 text-md">Sat, 18 Sep 2021</div>
         </div>
       </a>
 
@@ -132,9 +128,7 @@
         <div class="blog-card">
           Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
           with a Raspberry Pi
-          <div class="text-slate-600 dark:text-slate-400 text-md">
-            Sat, 18 Sep 2021
-          </div>
+          <div class="text-slate-400 text-md">Sat, 18 Sep 2021</div>
         </div>
       </a>
 
@@ -142,9 +136,7 @@
         <div class="blog-card">
           Part 1 Intro — Build and Monitor an Affordable Battery-Solar System
           with a Raspberry Pi
-          <div class="text-slate-600 dark:text-slate-400 text-md">
-            Sat, 18 Sep 2021
-          </div>
+          <div class="text-slate-400 text-md">Sat, 18 Sep 2021</div>
         </div>
       </a>
     </div>
@@ -155,7 +147,7 @@
       </div>
     </div>
     <div class="text-center mx-4 sm:mx-12">
-      <p class="text-lg dark:text-slate-200 py-6">
+      <p class="text-lg text-slate-200 py-6">
         A brief summary of recent endeavours.
       </p>
     </div>
@@ -163,18 +155,13 @@
     <div class="flex flex-col justify-center py-6 mx-8 sm:mx-12 lg:py-12">
       <div class="w-full mx-auto lg:max-w-4xl">
         <div class="relative">
-          <!-- Vertical middle line-->
-          <div
-            class="absolute hidden w-px h-full transform -translate-x-1/2 dark:bg-[#2770e6] lg:block left-1/2"
-          ></div>
           <div class="space-y-12 lg:space-y-8">
-            <!-- Left section -->
             <div>
               <div class="flex flex-col items-center">
                 <div class="flex items-center justify-start w-full mx-auto">
-                  <div class="w-full lg:w-1/2 lg:pr-8">
+                  <div class="w-full">
                     <div class="timeline-card">
-                      <h1 class="text-xl p-4 font-bold">
+                      <h1 class="text-xl pb-4 font-bold">
                         Computer Science MSc
                       </h1>
                       <p>
@@ -191,13 +178,12 @@
               </div>
             </div>
 
-            <!-- Right section -->
             <div>
               <div class="flex flex-col items-center">
                 <div class="flex items-center justify-end w-full mx-auto">
-                  <div class="w-full lg:w-1/2 lg:pl-8">
+                  <div class="w-full">
                     <div class="timeline-card">
-                      <h2 class="text-xl p-4 font-bold">ATPL Student Pilot</h2>
+                      <h2 class="text-xl pb-4 font-bold">ATPL Student Pilot</h2>
                       <p>
                         Studied at Lufthansa Aviation Training GmbH, Germany for
                         an EASA ATPL. Passed all 14 theory exams but stopped
@@ -213,13 +199,12 @@
               </div>
             </div>
 
-            <!-- Left section -->
             <div>
               <div class="flex flex-col items-center">
                 <div class="flex items-center justify-start w-full mx-auto">
-                  <div class="w-full lg:w-1/2 lg:pr-8">
+                  <div class="w-full">
                     <div class="timeline-card">
-                      <h2 class="text-xl p-4 font-bold">
+                      <h2 class="text-xl pb-4 font-bold">
                         Mechanical Engineering BEng
                       </h2>
                       <p>
@@ -253,7 +238,7 @@
         <div class="link-card">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-12 w-12 sm:w-16 sm:h-16 stroke-slate-600 dark:stroke-slate-200"
+            class="h-10 w-10 sm:w-12 sm:h-12 m-2 stroke-slate-200"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -272,7 +257,7 @@
         <div class="link-card">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-12 w-12 sm:w-16 sm:h-16 stroke-slate-600 dark:stroke-slate-200"
+            class="h-10 w-10 sm:w-12 sm:h-12 m-2 stroke-slate-200"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -294,8 +279,8 @@
       </div>
     </div>
     <div class="text-center">
-      <p class="text-slate-300 p-4">Please feel free to say hi at:</p>
-      <p class="text-slate-700 dark:text-slate-200 text-xl pb-4">
+      <p class="text-slate-300 p-4">Please feel free to say hi!</p>
+      <p class="text-slate-200 text-xl pb-4">
         <em>hi@sebhulse.com</em>
       </p>
     </div>
