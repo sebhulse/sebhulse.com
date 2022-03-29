@@ -635,15 +635,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "58893f751c9b0412871a09abd62ecd2a00298c6c83befa223ef98c52aef40cbe"
 
 [[package]]
-name = "poloto"
-version = "3.13.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2541c28c0622b297e342444bd8b1d87b02c8478dd3ed0ecc3eee47dc4d13282"
-dependencies = [
- "tagger",
-]
-
-[[package]]
 name = "proc-macro2"
 version = "1.0.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -729,7 +720,6 @@ dependencies = [
 name = "rs"
 version = "0.1.0"
 dependencies = [
- "poloto",
  "reqwest",
  "rss",
  "tokio",
@@ -868,12 +858,6 @@ dependencies = [
  "quote",
  "unicode-xid",
 ]
-
-[[package]]
-name = "tagger"
-version = "4.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "784b8dc1bae576c9a5a30eab904fd61097ed86366b2a6f3b3cd4fe07037b835e"
 
 [[package]]
 name = "tempfile"
