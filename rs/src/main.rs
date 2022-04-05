@@ -4,10 +4,10 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::prelude::*;
 use std::path::Path;
+use chrono::offset::Utc;
 
 // TODO: input -i output -o command line argmuents 
 // TODO: minify_html 
-// TODO: output to html file
 
 struct BlogPost {
     title: String,
@@ -40,14 +40,22 @@ fn parse_rss_feed(channel_feed: Channel) -> Result<HashMap<i32, BlogPost>, Box<d
     Ok(map)
 }
 
-fn read_input_html_file(input_file_path: &str) -> Result<String, Box<dyn Error>> {
-    let path = Path::new(input_file_path);
+fn read_html_file(html_file_path: &str) -> Result<String, Box<dyn Error>> {
+    let path = Path::new(html_file_path);
     let mut file = File::open(&path).expect("Couldn't open file");
     let mut result = String::new();
 
     file.read_to_string(&mut result).expect("Couldn't read file to string");
     Ok(result)
 }
+
+fn write_html_file(html: String, html_file_path: &str) -> Result<(), Box<dyn Error>> {
+    let path = Path::new(html_file_path);
+    let mut file = File::create(path).expect("Couldn't create file");
+    file.write_all(html.as_bytes())?;
+    Ok(())
+}
+
 
 fn insert_blog_posts(html_file: String, posts: String) -> Result<String, Box<dyn Error>> {
     let result: String = html_file[..].replace("<!-- insert posts here -->", &posts[..]);
@@ -56,6 +64,9 @@ fn insert_blog_posts(html_file: String, posts: String) -> Result<String, Box<dyn
 
 fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<dyn Error>> {
     let mut post = String::new();
+    let timestamp = Utc::now().to_rfc2822();
+    let timestamp_section = &timestamp[0..16];
+    post.push_str(&format!("<span class='text-slate-400 my-10'>Updated {}</span>\n", timestamp_section));
 
     for index in 1..5 {
         let title = &blog_posts.get(&index).unwrap().title;
@@ -73,13 +84,14 @@ async fn main() {
     let blog_posts = parse_rss_feed(channel_feed).unwrap();
 
     let posts = create_blog_posts(blog_posts).unwrap();
-    // println!("posts: {}", posts);
 
-    let input_file_path = "../../index_copy.html";
+    let input_html_file_path = "../../index_copy.html";
 
-    let html = read_input_html_file(input_file_path).unwrap();
-    // println!("{:?}", html);
+    let html = read_html_file(input_html_file_path).unwrap();
+
     let html_with_blog_posts = insert_blog_posts(html, posts).unwrap();
-    println!("{:?}", html_with_blog_posts);
+   
+    let output_html_file_path = "../../index_output.html";
 
+    write_html_file(html_with_blog_posts, output_html_file_path).unwrap();
 }
