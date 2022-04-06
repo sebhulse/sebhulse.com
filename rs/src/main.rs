@@ -5,9 +5,13 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::path::Path;
 use chrono::offset::Utc;
+use minify_html::{Cfg, minify};
 
 // TODO: input -i output -o command line argmuents 
-// TODO: minify_html 
+// TODO: get size of webpage (css and html)
+// TODO: Devops 
+// - minify css and compile main.rs on push
+// - schedule main.rs to run every day
 
 struct BlogPost {
     title: String,
@@ -44,18 +48,10 @@ fn read_html_file(html_file_path: &str) -> Result<String, Box<dyn Error>> {
     let path = Path::new(html_file_path);
     let mut file = File::open(&path).expect("Couldn't open file");
     let mut result = String::new();
-
+    
     file.read_to_string(&mut result).expect("Couldn't read file to string");
     Ok(result)
 }
-
-fn write_html_file(html: String, html_file_path: &str) -> Result<(), Box<dyn Error>> {
-    let path = Path::new(html_file_path);
-    let mut file = File::create(path).expect("Couldn't create file");
-    file.write_all(html.as_bytes())?;
-    Ok(())
-}
-
 
 fn insert_blog_posts(html_file: String, posts: String) -> Result<String, Box<dyn Error>> {
     let result: String = html_file[..].replace("<!-- insert posts here -->", &posts[..]);
@@ -66,15 +62,29 @@ fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<d
     let mut post = String::new();
     let timestamp = Utc::now().to_rfc2822();
     let timestamp_section = &timestamp[0..16];
-    post.push_str(&format!("<span class='text-slate-400 my-10'>Updated {}</span>\n", timestamp_section));
+    post.push_str(&format!("<p class='text-lg text-slate-200 pt-6'>Here are my 6 most recent posts (of {}):</p>\n", blog_posts.len()));
+    post.push_str(&format!("<p class='text-slate-400'>Updated {}</p>\n", timestamp_section));
 
-    for index in 1..5 {
+    for index in 1..7 {
         let title = &blog_posts.get(&index).unwrap().title;
         let link = &blog_posts.get(&index).unwrap().link;
         let pub_date = &blog_posts.get(&index).unwrap().pub_date;
-        post.push_str(&format!("<a target='_blank' href={}><div class='blog-card'>{}<div class='text-slate-400 text-md'>{}</div></div></a>\n", &link, &title, &pub_date));
+        post.push_str(&format!("<a target='_blank' href='{}'><div class='blog-card'>{}<div class='text-slate-400 text-md'>{}</div></div></a>\n", &link, &title, &pub_date));
     }
     Ok(post)
+}
+
+fn minify_html(html: String) -> Result<String, Box<dyn Error>> {
+    let minified_html = minify(html.as_bytes(), &Cfg::new());
+    let result = std::str::from_utf8(&minified_html).unwrap().to_string();
+    Ok(result)
+}
+
+fn write_html_file(html: String, html_file_path: &str) -> Result<(), Box<dyn Error>> {
+    let path = Path::new(html_file_path);
+    let mut file = File::create(path).expect("Couldn't create file");
+    file.write_all(html.as_bytes())?;
+    Ok(())
 }
 
 #[tokio::main]
@@ -85,13 +95,15 @@ async fn main() {
 
     let posts = create_blog_posts(blog_posts).unwrap();
 
-    let input_html_file_path = "../../index_copy.html";
+    let input_html_file_path = "../../index_input.html";
 
     let html = read_html_file(input_html_file_path).unwrap();
 
     let html_with_blog_posts = insert_blog_posts(html, posts).unwrap();
    
-    let output_html_file_path = "../../index_output.html";
+    let output_html_file_path = "../../index.html";
 
-    write_html_file(html_with_blog_posts, output_html_file_path).unwrap();
+    let minified_html = minify_html(html_with_blog_posts).unwrap();
+
+    write_html_file(minified_html, output_html_file_path).unwrap();
 }
