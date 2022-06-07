@@ -95,7 +95,7 @@ async fn main() {
 
     let posts = create_blog_posts(blog_posts).unwrap();
 
-    let input_html_file_path = "../../index_input.html";
+    let input_html_file_path = "../../src/index.html";
 
     let html = read_html_file(input_html_file_path).unwrap();
 
