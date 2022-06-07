@@ -12,6 +12,7 @@ use minify_html::{Cfg, minify};
 // TODO: Devops 
 // - minify css and compile main.rs on push
 // - schedule main.rs to run every day
+// TODO: Improve styling of website - more focus on landing page, with links to other pages in corners (or hamburger menu on mobile)
 
 struct BlogPost {
     title: String,
