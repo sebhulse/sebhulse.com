@@ -69,7 +69,7 @@ fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<d
     let timestamp = Utc::now().to_rfc2822();
     let timestamp_section = &timestamp[0..16];
     post.push_str(&format!(
-        "<p class='text-lg text-slate-200 pt-6'>Here are my 6 most recent posts (of {}):</p>\n",
+        "<p class='text-lg text-slate-200 pt-4'>Here are my 6 most recent posts (of {}):</p>\n",
         blog_posts.len()
     ));
     post.push_str(&format!(

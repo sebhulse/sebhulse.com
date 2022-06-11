@@ -22,45 +22,59 @@
       class="lg:px-16 px-8 flex flex-wrap items-center justify-between py-4"
     >
       <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1000 1000"
-          class="h-14 w-14 sm:w-16 sm:h-16 stroke-slate-200"
-        >
-          <g stroke-linecap="round" stroke-width="35">
-            <path fill="none" d="M500 1000V667" />
-            <g fill="none">
+        <a href="/index.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 1000"
+            class="h-14 w-14 sm:w-16 sm:h-16 stroke-slate-200"
+          >
+            <g stroke-linecap="round" stroke-width="35">
+              <path fill="none" d="M500 1000V667" />
+              <g fill="none">
+                <path
+                  d="m500 667 126.06062918-180.0332363M626.06062918 486.9667637l136.30692517-49.61166348M762.36755435 437.35510022l92.4740681 24.77835187"
+                />
+              </g>
               <path
-                d="m500 667 126.06062918-180.0332363M626.06062918 486.9667637l136.30692517-49.61166348M762.36755435 437.35510022l92.4740681 24.77835187"
+                fill="none"
+                d="m762.3676 437.3551 54.91371323-78.42132946"
+              />
+              <g fill="none">
+                <path
+                  d="m626.0606 486.9668-.00119004-145.06245869M626.05940996 341.90434131l54.91428432-78.42709504"
+                  stroke-width="35.00175"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m626.0606 341.9119-54.91202843-78.42250394"
+              />
+              <g fill="none">
+                <path
+                  d="M500 667 373.93937082 486.9667637M373.93937082 486.9667637v-145.0548M373.93937082 341.9119637l54.91202842-78.42250394"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m373.9394 341.9119-54.91202843-78.42250394"
+              />
+              <g fill="none">
+                <path
+                  d="m373.9394 486.9668-136.31371496-49.61540118M237.62568504 437.35139882l-54.91428432-78.42709504"
+                  stroke-width="35.00175"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m237.6324 437.3551-92.47354068 24.78033676"
               />
             </g>
-            <path fill="none" d="m762.3676 437.3551 54.91371323-78.42132946" />
-            <g fill="none">
-              <path
-                d="m626.0606 486.9668-.00119004-145.06245869M626.05940996 341.90434131l54.91428432-78.42709504"
-                stroke-width="35.00175"
-              />
-            </g>
-            <path fill="none" d="m626.0606 341.9119-54.91202843-78.42250394" />
-            <g fill="none">
-              <path
-                d="M500 667 373.93937082 486.9667637M373.93937082 486.9667637v-145.0548M373.93937082 341.9119637l54.91202842-78.42250394"
-              />
-            </g>
-            <path fill="none" d="m373.9394 341.9119-54.91202843-78.42250394" />
-            <g fill="none">
-              <path
-                d="m373.9394 486.9668-136.31371496-49.61540118M237.62568504 437.35139882l-54.91428432-78.42709504"
-                stroke-width="35.00175"
-              />
-            </g>
-            <path fill="none" d="m237.6324 437.3551-92.47354068 24.78033676" />
-          </g>
-        </svg>
+          </svg>
+        </a>
       </div>
       <label for="menu-toggle" class="pointer-cursor lg:hidden block">
         <svg
-          class="fill-current text-slate-200"
+          class="fill-current text-slate-200 cursor-pointer"
           xmlns="http://www.w3.org/2000/svg"
           width="30"
           height="30"
@@ -77,28 +91,28 @@
           >
             <li>
               <a
-                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent lg:hover:border-slate-200"
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
                 href="/index.html"
                 >Home</a
               >
             </li>
             <li>
               <a
-                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent lg:hover:border-slate-200"
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
                 href="projects.html"
                 >Projects and Writing</a
               >
             </li>
             <li>
               <a
-                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent lg:hover:border-slate-200"
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
                 href="/about.html"
                 >About</a
               >
             </li>
             <li>
               <a
-                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent lg:hover:border-slate-200"
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
                 href="/contact.html"
                 >Contact</a
               >
@@ -127,8 +141,16 @@
         </div>
       </div>
     </body>
-    <footer class="sticky top-[100vh] p-4 text-center bg-slate-900/50">
-      <span class="text-slate-300 text-sm">Copyright © Seb Hulse 2022</span>
+    <footer
+      class="flex flex-col sticky top-[100vh] p-4 text-center bg-slate-900/50"
+    >
+      <span class="text-slate-300 text-xs">Copyright © Seb Hulse 2022</span>
+      <a
+        class="text-slate-300 text-xs underline hover:text-[#9867f0]"
+        href="https://github.com/sebhulse"
+        target="_blank"
+        >Hosted with ♥ on GitHub</a
+      >
     </footer>
   </div>
 </html>

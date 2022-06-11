@@ -469,32 +469,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .title {
-  margin: 0.5rem;
+  /* @apply title-grad-fix font-sans tracking-wide font-extrabold m-2 text-4xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#2770e6] to-[#f7a5a7]; */
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #2770e6;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(39 112 230 / 0));
   --tw-gradient-to: #f7a5a7;
   -webkit-background-clip: text;
           background-clip: text;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 3rem;
+  line-height: 1;
   font-weight: 800;
-  letter-spacing: 0.025em;
   color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 }
 
 @media (min-width: 640px) {
   .title {
-    font-size: 3.75rem;
+    font-size: 6rem;
     line-height: 1;
   }
-}
-
-.title {
-  /* @apply title-grad-fix font-serif tracking-wide font-extrabold m-2 text-4xl sm:text-6xl; */
 }
 
 .blog-card {
@@ -621,6 +616,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -659,6 +666,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-10 {
   width: 2.5rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -828,6 +839,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -869,9 +885,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .hover\:border-slate-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
+.hover\:text-\[\#9867f0\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(152 103 240 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -959,10 +985,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:pt-0 {
     padding-top: 0px;
-  }
-
-  .lg\:hover\:border-slate-200:hover {
-    --tw-border-opacity: 1;
-    border-color: rgb(226 232 240 / var(--tw-border-opacity));
   }
 }
