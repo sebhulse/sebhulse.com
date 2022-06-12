@@ -18,125 +18,155 @@
     </style>
   </head>
 
-  <header class="lg:px-16 px-8 flex flex-wrap items-center justify-end">
-    <label for="menu-toggle" class="pointer-cursor lg:hidden block">
-      <svg
-        class="fill-current text-slate-200"
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-        viewBox="0 0 20 20"
-      >
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-    </label>
-    <input class="hidden" type="checkbox" id="menu-toggle" />
-
-    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
-      <nav>
-        <ul
-          class="lg:flex items-center justify-end text-base text-slate-200 pt-4 lg:pt-0"
+  <div class="min-h-screen">
+    <header
+      class="lg:px-16 px-8 flex flex-wrap items-center justify-between py-4"
+    >
+      <div>
+        <a href="/index.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 1000"
+            class="h-14 w-14 sm:w-16 sm:h-16 stroke-slate-200"
+          >
+            <g stroke-linecap="round" stroke-width="35">
+              <path fill="none" d="M500 1000V667" />
+              <g fill="none">
+                <path
+                  d="m500 667 126.06062918-180.0332363M626.06062918 486.9667637l136.30692517-49.61166348M762.36755435 437.35510022l92.4740681 24.77835187"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m762.3676 437.3551 54.91371323-78.42132946"
+              />
+              <g fill="none">
+                <path
+                  d="m626.0606 486.9668-.00119004-145.06245869M626.05940996 341.90434131l54.91428432-78.42709504"
+                  stroke-width="35.00175"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m626.0606 341.9119-54.91202843-78.42250394"
+              />
+              <g fill="none">
+                <path
+                  d="M500 667 373.93937082 486.9667637M373.93937082 486.9667637v-145.0548M373.93937082 341.9119637l54.91202842-78.42250394"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m373.9394 341.9119-54.91202843-78.42250394"
+              />
+              <g fill="none">
+                <path
+                  d="m373.9394 486.9668-136.31371496-49.61540118M237.62568504 437.35139882l-54.91428432-78.42709504"
+                  stroke-width="35.00175"
+                />
+              </g>
+              <path
+                fill="none"
+                d="m237.6324 437.3551-92.47354068 24.78033676"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+      <label for="menu-toggle" class="pointer-cursor lg:hidden block">
+        <svg
+          class="fill-current text-slate-200 cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 20 20"
         >
-          <li>
-            <a
-              class="lg:p-4 py-3 px-0 text-right text-xl block border-b-2 border-transparent hover:border-slate-200"
-              href="/index.html"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              class="lg:p-4 py-3 px-0 text-right text-xl block border-b-2 border-transparent hover:border-slate-200"
-              href="projects.html"
-              >Projects and Writing</a
-            >
-          </li>
-          <li>
-            <a
-              class="lg:p-4 py-3 px-0 text-right text-xl block border-b-2 border-transparent hover:border-slate-200"
-              href="/about.html"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              class="lg:p-4 py-3 px-0 text-right text-xl block border-b-2 border-transparent hover:border-slate-200"
-              href="/contact.html"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <body
-    id="body"
-    class="font-sans pt-4 my-4 bg-slate-900 text-slate-200 sm:my-8"
-  >
-    <div id="links" class="mt-20">
-      <div class="text-center">
-        <span class="title">Links</span>
-      </div>
-    </div>
-
-    <div class="text-center flex justify-center mx-4 mt-4 sm:mx-12">
-      <div></div>
-      <a href="https://github.com/sebhulse" target="_blank">
-        <div class="link-card">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10 sm:w-12 sm:h-12 m-2 stroke-slate-200"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input class="hidden" type="checkbox" id="menu-toggle" />
+      <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+        <nav>
+          <ul
+            class="lg:flex items-center justify-end text-base text-slate-200 pt-4 lg:pt-0"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-            />
-          </svg>
-        </div>
-        <p class="">Github</p>
-      </a>
-      <a href="https://sebhulse.medium.com" target="_blank">
-        <div class="link-card">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10 sm:w-12 sm:h-12 m-2 stroke-slate-200"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-            />
-          </svg>
-        </div>
-        <p class="">Medium</p>
-      </a>
-    </div>
-    <div id="contact" class="mt-20">
-      <div class="text-center">
-        <span class="title">Contact</span>
+            <li>
+              <a
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
+                href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
+                href="projects.html"
+                >Projects and Writing</a
+              >
+            </li>
+            <li>
+              <a
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
+                href="/about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="lg:p-4 py-1 px-0 text-right text-xl block border-b-2 border-transparent hover:text-[#9867f0]"
+                href="/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="text-center">
-      <p class="text-slate-300 p-4">Please feel free to say hi!</p>
-      <p class="text-slate-200 text-xl pb-4">
-        <em>hi@sebhulse.com</em>
-      </p>
-    </div>
+    </header>
 
-    <div class="text-center mb-6 sm:mx-12">
-      <a target="_blank" href="mailto:hi@sebhulse.com">
-        <div class="blog-card">Email</div>
-      </a>
-    </div>
-  </body>
+    <body id="body" class="mb-auto font-sans bg-slate-900 text-slate-200">
+      <div id="projects" class="">
+        <div class="text-center p-4">
+          <h1 class="title">Contact</h1>
+        </div>
+      </div>
+      <div class="text-center p-4">
+        <p class="text-lg text-slate-200 py-4">Please feel free to say hi!</p>
+        <a
+          href="mailto:hi@sebhulse.com"
+          class="text-slate-200 font-serif text-2xl sm:text-3xl underline hover:text-[#9867f0]"
+        >
+          <em>hi@sebhulse.com</em>
+        </a>
+        <p class="text-lg text-slate-200 pt-10 py-4">
+          Oh, and here are a few more places you can find me:
+        </p>
+        <div class="flex items-center justify-center">
+          <a
+            href="https://github.com/sebhulse"
+            target="_blank"
+            class="text-slate-200 font-serif text-2xl sm:text-3xl underline hover:text-[#9867f0]"
+            ><em>GitHub</em></a
+          >
+          <p class="px-4">|</p>
+          <a
+            href="https://sebhulse.medium.com"
+            target="_blank"
+            class="text-slate-200 font-serif text-2xl sm:text-3xl underline hover:text-[#9867f0]"
+            ><em>Medium</em></a
+          >
+        </div>
+      </div>
+    </body>
+    <footer
+      class="flex flex-col sticky top-[100vh] p-4 text-center bg-slate-900/50"
+    >
+      <span class="text-slate-300 text-xs">Copyright © Seb Hulse 2022</span>
+      <a
+        class="text-slate-300 text-xs underline hover:text-[#9867f0]"
+        href="https://github.com/sebhulse"
+        target="_blank"
+        >Hosted with ♥ on GitHub</a
+      >
+    </footer>
+  </div>
 </html>

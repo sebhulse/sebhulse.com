@@ -7,12 +7,12 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::path::Path;
 
-// TODO: input -i output -o command line argmuents
-// TODO: get size of webpage (css and html)
+
 // TODO: Devops
+// - refactor html css to prettify
+// - Check content e.g. timeline
 // - minify css and compile main.rs on push
-// - schedule main.rs to run every day
-// TODO: Improve styling of website - more focus on landing page, with links to other pages in corners (or hamburger menu on mobile)
+// - build binary and schedule main.rs to run every day
 
 struct BlogPost {
     title: String,
