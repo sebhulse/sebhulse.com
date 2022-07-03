@@ -1,5 +1,6 @@
 for file in src/*.html;
 do
+    cd rs 
     file=${file%*/}
-    cd rs && cargo run ../src/${file##*/} ../${file##*/}
+    cargo run ../src/${file##*/} ../${file##*/}
 done
