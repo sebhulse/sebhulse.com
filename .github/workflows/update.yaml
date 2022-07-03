@@ -1,8 +1,9 @@
 name: Update
 
 on:
-  schedule:
-    - cron: "0 0 * * *" # every day at midnight
+  push:
+  # schedule:
+  #   - cron: "0 0 * * *" # every day at midnight
 
 jobs:
   build:
