@@ -16,7 +16,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo build --release --all-features
+      - run: cd rs && cargo build --release --all-features
 
       - run: mv rs/target/release/rs tools/build
 
