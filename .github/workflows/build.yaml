@@ -15,11 +15,13 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cd rs && cargo build --release --all-features
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features
       - run: mv rs/target/release/rs tools/build
       - run: bash deploy.sh
-
-      - name: Add & Commit
+      - run: tools/tailwindcss-linux-x64 -i ./src/input.css -o ./dist/output.css --minify
         uses: EndBug/add-and-commit@v9
         with:
           add: "."
