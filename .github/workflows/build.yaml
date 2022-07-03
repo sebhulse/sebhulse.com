@@ -16,12 +16,6 @@ jobs:
         with:
           toolchain: stable
       - run: cd rs && cargo build --release --all-features
-<<<<<<< Updated upstream
-=======
-      - run: mv target/release/rs ../tools/build
-      # - name: Build
-      #   run:
->>>>>>> Stashed changes
 
       - run: mv rs/target/release/rs tools/build
 
