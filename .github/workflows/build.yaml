@@ -1,0 +1,29 @@
+name: Compile and Build
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+      # - name: Build
+      #   run:
+
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "compile and build"
