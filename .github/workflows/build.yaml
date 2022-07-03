@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v2
-
-      - name: Compile rust build executable
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -21,24 +19,9 @@ jobs:
         with:
           command: build
           args: --release --all-features
-<<<<<<< HEAD
-=======
-
-      - name: Move and rename rust build executable
->>>>>>> 3e6410dece71b0636e5a08a383b4330c9daf4ba1
       - run: mv rs/target/release/rs tools/build
-
-      - name: Run rust build executable
       - run: bash deploy.sh
-<<<<<<< HEAD
       - run: tools/tailwindcss-linux-x64 -i ./src/input.css -o ./dist/output.css --minify
-=======
-
-      - name: Run tailwindCSS minify script
-      - run: tools/tailwindcss-linux-x64 -i ./src/input.css -o ./dist/output.css --minify
-
-      - name: Add & Commit
->>>>>>> 3e6410dece71b0636e5a08a383b4330c9daf4ba1
         uses: EndBug/add-and-commit@v9
         with:
           add: "."
