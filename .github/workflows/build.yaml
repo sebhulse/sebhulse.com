@@ -16,7 +16,7 @@ jobs:
         with:
           toolchain: stable
       - run: cd rs && cargo build --release --all-features
-      - run: mv target/release/rs ../tools/build
+      - run: mv rs/target/release/rs tools/build
       - run: bash deploy.sh
 
       - name: Add & Commit
