@@ -1,0 +1,21 @@
+name: Update
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # every day at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: prod
+
+      - run: tools/build src/projects.html projects.html
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "compile and build"
