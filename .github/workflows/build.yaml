@@ -12,16 +12,22 @@ jobs:
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v2
+
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+
       - uses: actions-rs/cargo@v1
         with:
           command: build
           args: --release --all-features
+
       - run: mv rs/target/release/rs tools/build
+
       - run: bash deploy.sh
+
       - run: tools/tailwindcss-linux-x64 -i ./src/input.css -o ./dist/output.css --minify
+
         uses: EndBug/add-and-commit@v9
         with:
           add: "."
