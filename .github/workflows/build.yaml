@@ -12,12 +12,18 @@ jobs:
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v2
+      - name: Compile rust build script
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
       - run: cd rs && cargo build --release --all-features
       - run: mv rs/target/release/rs tools/build
+
+      - name: Run rust build script
       - run: bash deploy.sh
+
+      - name: Run tailwindCSS minify script
+      - run: tools/tailwindcss-linux-x64 -i ./src/input.css -o ./dist/output.css --minify
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9
