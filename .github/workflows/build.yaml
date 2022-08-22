@@ -23,7 +23,11 @@ jobs:
 
       - run: tools/tailwindcss-linux-x64 -i ./src/input.css -o ./dist/output.css --minify
 
-      - uses: EndBug/add-and-commit@v9
+      # - uses: EndBug/add-and-commit@v9
+      #   with:
+      #     add: "."
+      #     message: "compile and build"
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          add: "."
-          message: "compile and build"
+          folder: dist
