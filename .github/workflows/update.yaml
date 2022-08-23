@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: prod
+          ref: main
 
       - run: tools/build src/projects.html projects.html
 
