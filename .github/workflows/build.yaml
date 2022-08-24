@@ -3,7 +3,7 @@ name: Compile and Build
 on:
   push:
     branches:
-      - prod
+      - main
 
 jobs:
   build:

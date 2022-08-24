@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/Seb/Documents/GitHub/new_website/.github/workflows/build.yaml"
+  }
+}
