@@ -17,5 +17,5 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: "projects.html"
+          add: "."
           message: "update"
