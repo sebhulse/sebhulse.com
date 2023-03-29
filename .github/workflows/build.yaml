@@ -25,5 +25,5 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: "."
+          add: "about.html contact.html index.html projects.html ./dist/output.css"
           message: "compile and build"
