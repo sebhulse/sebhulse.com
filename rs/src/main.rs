@@ -29,7 +29,7 @@ async fn get_channel_feed(input_feed: &str) -> Result<Channel, Box<dyn Error>> {
 fn parse_rss_feed(channel_feed: Channel) -> Result<HashMap<i32, BlogPost>, Box<dyn Error>> {
     let mut map: HashMap<i32, BlogPost> = HashMap::new();
     let channel_items = channel_feed.items();
-    let mut counter = 1;
+    let mut counter = 0;
 
     for x in channel_items {
         let title = x.title().unwrap().replace("\u{200a}", " ");
@@ -77,10 +77,10 @@ fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<d
         timestamp_section
     ));
 
-    for index in blog_posts.iter() {
-        let title = &index.1.title;
-        let link = &index.1.link;
-        let pub_date = &index.1.pub_date;
+    for index in 0..blog_posts.len() as i32 {
+        let title = &blog_posts.get(&index).unwrap().title;
+        let link = &blog_posts.get(&index).unwrap().link;
+        let pub_date = &blog_posts.get(&index).unwrap().pub_date;
         post.push_str(&format!("<a target='_blank' href='{}'><div class='blog-card'>{}<div class='text-slate-400 text-md'>{}</div></div></a>\n", &link, &title, &pub_date));
     }
     Ok(post)
