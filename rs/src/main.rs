@@ -69,15 +69,15 @@ fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<d
     let timestamp = Utc::now().to_rfc2822();
     let timestamp_section = &timestamp[0..16];
     post.push_str(&format!(
-        "<p class='text-lg text-slate-200 pt-4'>Here are my 6 most recent posts (of {}):</p>\n",
+        "<p class='text-lg text-slate-200 pt-4'>Here are my {} medium-published articles:</p>\n",
         blog_posts.len()
     ));
     post.push_str(&format!(
-        "<p class='text-slate-400'>Updated {}</p>\n",
+        "<p class='text-slate-400'>Updates weekly, latest on {}</p>\n",
         timestamp_section
     ));
 
-    for index in 1..7 {
+    for index in 1..blog_posts.len() as i32 {
         let title = &blog_posts.get(&index).unwrap().title;
         let link = &blog_posts.get(&index).unwrap().link;
         let pub_date = &blog_posts.get(&index).unwrap().pub_date;

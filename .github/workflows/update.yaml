@@ -2,7 +2,7 @@ name: Update
 
 on:
   schedule:
-    - cron: "0 0 * * *" # every day at midnight
+    - cron: "0 0 * * 1" # every week at midnight on Monday
 
 jobs:
   build:

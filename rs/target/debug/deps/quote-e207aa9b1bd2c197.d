@@ -1,0 +1,13 @@
+/Users/Seb/Documents/GitHub/new_website/rs/target/debug/deps/quote-e207aa9b1bd2c197.rmeta: /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/Users/Seb/Documents/GitHub/new_website/rs/target/debug/deps/libquote-e207aa9b1bd2c197.rlib: /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/Users/Seb/Documents/GitHub/new_website/rs/target/debug/deps/quote-e207aa9b1bd2c197.d: /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs:
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs:
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs:
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs:
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs:
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs:
+/Users/Seb/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs:
