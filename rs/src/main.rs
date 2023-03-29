@@ -77,7 +77,7 @@ fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<d
         timestamp_section
     ));
 
-    for index in 1..blog_posts.len() as i32 {
+    for index in 0..blog_posts.len() as i32 {
         let title = &blog_posts.get(&index).unwrap().title;
         let link = &blog_posts.get(&index).unwrap().link;
         let pub_date = &blog_posts.get(&index).unwrap().pub_date;
