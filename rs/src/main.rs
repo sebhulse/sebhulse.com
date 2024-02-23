@@ -1,4 +1,3 @@
-use chrono::offset::Utc;
 use minify_html::{minify, Cfg};
 use rss::Channel;
 use std::collections::HashMap;
@@ -66,15 +65,9 @@ fn insert_blog_posts(html_file: String, posts: String) -> Result<String, Box<dyn
 
 fn create_blog_posts(blog_posts: HashMap<i32, BlogPost>) -> Result<String, Box<dyn Error>> {
     let mut post = String::new();
-    let timestamp = Utc::now().to_rfc2822();
-    let timestamp_section = &timestamp[0..16];
     post.push_str(&format!(
-        "<p class='text-lg text-slate-200 pt-4'>Here are my {} medium-published articles:</p>\n",
+        "<p class='text-lg text-slate-200 py-4'>Here are my {} medium-published articles:</p>\n",
         blog_posts.len()
-    ));
-    post.push_str(&format!(
-        "<p class='text-slate-400'>Updates weekly, latest on {}</p>\n",
-        timestamp_section
     ));
 
     for index in 0..blog_posts.len() as i32 {
