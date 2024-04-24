@@ -1,5 +1,5 @@
-for file in src/*.html;
+for file in /src/*.html;
 do
     file=${file%*/}
-    tools/build src/${file##*/} ${file##*/}
+    rs /src/${file##*/} /dist/${file##*/}
 done
